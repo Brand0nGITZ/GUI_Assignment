@@ -10,11 +10,13 @@ public class Product implements Serializable {
     private String category;
     private int stock;
     private String imageUrl; // Optional: for storing product images
+    private String createdAt;
+    private String updatedAt;
 
     // Constructors
     public Product() {}
 
-    public Product(int id, String name, double price, String description, String category, int stock, String imageUrl) {
+    public Product(int id, String name, double price, String description, String category, int stock, String imageUrl, String createdAt, String updatedAt) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -22,6 +24,8 @@ public class Product implements Serializable {
         this.category = category;
         this.stock = stock;
         this.imageUrl = imageUrl;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     // Getters and Setters
@@ -45,4 +49,23 @@ public class Product implements Serializable {
 
     public String getImageUrl() { return imageUrl; }
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+    
+    public void setCreatedAt (String createdAt) {
+        this.createdAt = createdAt;
+    }
+    
+    public String getCreatedAt () {
+        return createdAt;
+    }
+    
+     public void setUpdatedAt (String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+    
+    public String getUpdatedAt () {
+        return updatedAt;
+    }
+    
+    
+    
 }

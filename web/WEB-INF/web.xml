@@ -4,8 +4,24 @@
         <servlet-name>ProductServlet</servlet-name>
         <servlet-class>ProductServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>randomservlet</servlet-name>
+        <servlet-class>randomservlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>newds</servlet-name>
+        <servlet-class>servlet.newds</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProductServlet</servlet-name>
         <url-pattern>/ProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>randomservlet</servlet-name>
+        <url-pattern>/randomservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>newds</servlet-name>
+        <url-pattern>/newds</url-pattern>
     </servlet-mapping>
 </web-app>

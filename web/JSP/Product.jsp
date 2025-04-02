@@ -4,6 +4,23 @@
     Author     : yapji
 --%>
 
+<%@ page import="java.util.List, model.Product" %>
+<%
+    List<Product> products = (List<Product>) request.getAttribute("products");
+    if (products != null) {
+        for (Product p : products) {
+%>
+            <p>Product Name: <%= p.getName() %></p>
+            <p>Price: <%= p.getPrice() %></p>
+<%
+        }
+    } else {
+%>
+        <p>No products available.</p>
+<%
+    }
+%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

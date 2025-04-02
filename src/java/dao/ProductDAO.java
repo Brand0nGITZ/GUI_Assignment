@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-/**
- *
- * @author yapji
- */
 package dao;
 
 import model.Product;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List; 
-
+import java.util.List;
 
 public class ProductDAO {
     
@@ -21,38 +12,37 @@ public class ProductDAO {
     private static final String password = "brandon";
     
     public List<Product> getAllProducts() {
-         List<Product> products = new ArrayList<>();
-         String selectAll = "SELECT * FROM PRODUCTS ";
+        List<Product> products = new ArrayList<>();
+        String selectAll = "SELECT * FROM PRODUCTS";
         
-        try (Connection conn = DriverManager.getConnection(host, user , password)) {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(selectAll);
+        try {
+            // Load Derby JDBC Driver (important for some versions)
+            Class.forName("org.apache.derby.jdbc.ClientDriver"); 
+
+            try (Connection conn = DriverManager.getConnection(host, user, password);
+                 PreparedStatement stmt = conn.prepareStatement(selectAll);
+                 ResultSet rs = stmt.executeQuery()) { // ✅ Fixed execution
             
-             while (rs.next()) {
-            Product product = new Product();
-            rs.getInt("PRODUCT_ID");
-            rs.getString("NAME");
-            rs.getDouble("PRICE");
-            rs.getString("DESCRIPTION");
-            rs.getString("IMAGE_URL");
-            rs.getInt("STOCK_QUANTITY");
-            rs.getString("CATEGORY");
-            rs.getString("CREATED_AT");
-            rs.getString("UPDATED_AT"); 
-            
-            products.add(product);
-        }
+                while (rs.next()) {
+                    Product product = new Product();
+                    product.setId(rs.getInt("PRODUCT_ID"));
+                    product.setName(rs.getString("NAME"));
+                    product.setPrice(rs.getDouble("PRICE"));
+                    product.setDescription(rs.getString("DESCRIPTION"));
+                    product.setImageUrl(rs.getString("IMAGE_URL"));  // Ensure this column name is correct
+                    product.setStock(rs.getInt("STOCK_QUANTITY"));
+                    product.setCategory(rs.getString("CATEGORY"));
+               
+
+                    products.add(product);                  }
+            }
+        } catch (ClassNotFoundException e) {
+            System.out.println("Derby JDBC Driver not found!");
+            e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-         return products;
-       
-        
-    }
-    
 
-    
-    
-    
-    
+        return products;
+    }
 }
