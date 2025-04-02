@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="ProductCSS.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/ProductCSS.css">
         <title>Product</title>
     </head>
     <body> 
@@ -20,7 +20,7 @@
                 <section class="products">
   <article class="product-item">
     <figure>
-      <img class="product-image" src="ProductImages/GlowyCleanser.jpg" alt="Cleanser">
+      <img class="product-image" src="../ProductImages/GlowyCleanser.jpg" alt="Cleanser">
       <figcaption>Glowy Cleanser</figcaption>
     </figure>
     <h2>Glowy Cleanser</h2>
@@ -31,7 +31,7 @@
 
   <article class="product-item">
     <figure>
-      <img class="product-image" src="ProductImages/GlowyToner.jpg" alt="Toner">
+      <img class="product-image" src="../ProductImages/GlowyToner.jpg" alt="Toner">
       <figcaption>Glowy Toner</figcaption>
     </figure>
     <h2>Glowy Toner</h2>
@@ -42,7 +42,7 @@
 
   <article class="product-item">
     <figure>
-      <img class="product-image" src="ProductImages/GlowySunscreen.jpg" alt="Sunscreen">
+      <img class="product-image" src="../ProductImages/GlowySunscreen.jpg" alt="Sunscreen">
       <figcaption>Glowy Sunscreen</figcaption>
     </figure>
     <h2>Glowy Sunscreen</h2>
@@ -53,7 +53,7 @@
 
   <article class="product-item">
     <figure>
-      <img class="product-image" src="ProductImages/GlowyVitaminC.jpg" alt="Vitamin C">
+      <img class="product-image" src="../ProductImages/GlowyVitaminC.jpg" alt="Vitamin C">
       <figcaption>Glowy Vitamin C</figcaption>
     </figure>
     <h2>Glowy Vitamin C</h2>
@@ -64,15 +64,70 @@
             
     <article class="product-item">
     <figure>
-      <img class="product-image" src="ProductImages/GlowyMoisturizer.jpg" alt="Moisturizer">
+      <img class="product-image" src="../ProductImages/GlowyMoisturizer.jpg" alt="Moisturizer">
       <figcaption>Glowy Moistuirzer</figcaption>
     </figure>
     <h2>Glowy Vitamin C</h2>
     <p class="price">RM39.99</p>
     <p>Random description</p>
     <p><button>Add to cart</button></p>
-  </article>         
-                     
+  </article> 
+                    
+                     <article class="product-item">
+    <figure>
+      <img class="product-image" src="../ProductImages/GlowyAHA.png" alt="Moisturizer">
+      <figcaption>Glowy Moistuirzer</figcaption>
+    </figure>
+    <h2>Glowy Vitamin C</h2>
+    <p class="price">RM39.99</p>
+    <p>Random description</p>
+    <p><button>Add to cart</button></p>
+  </article>        
+                    
+                     <article class="product-item">
+    <figure>
+      <img class="product-image" src="../ProductImages/GlowyEyeCream.png" alt="Moisturizer">
+      <figcaption>Glowy Moistuirzer</figcaption>
+    </figure>
+    <h2>Glowy Vitamin C</h2>
+    <p class="price">RM39.99</p>
+    <p>Random description</p>
+    <p><button>Add to cart</button></p>
+  </article>        
+                    
+                     <article class="product-item">
+    <figure>
+      <img class="product-image" src="../ProductImages/GlowyRetinol.png" alt="Moisturizer">
+      <figcaption>Glowy Moistuirzer</figcaption>
+    </figure>
+    <h2>Glowy Vitamin C</h2>
+    <p class="price">RM39.99</p>
+    <p>Random description</p>
+    <p><button>Add to cart</button></p>
+  </article>        
+                    
+    <article class="product-item">
+    <figure>
+      <img class="product-image" src="../ProductImages/GlowyMoisturizer.jpg" alt="Moisturizer">
+      <figcaption>Glowy Moistuirzer</figcaption>
+    </figure>
+    <h2>Glowy Vitamin C</h2>
+    <p class="price">RM39.99</p>
+    <p>Random description</p>
+    <p><button>Add to cart</button></p>
+  </article>        
+                    
+     <article class="product-item">
+    <figure>
+      <img class="product-image" src="../ProductImages/GlowyMoisturizer.jpg" alt="Moisturizer">
+      <figcaption>Glowy Moistuirzer</figcaption>
+    </figure>
+    <h2>Glowy Vitamin C</h2>
+    <p class="price">RM39.99</p>
+    <p>Random description</p>
+    <p><button>Add to cart</button></p>
+  </article>                        
+                    
 </section>
                 
             </div>         
